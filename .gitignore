@@ -1,14 +1,10 @@
 # Dependencies
 node_modules/
 
-# Package-manager caches and logs
+# npm cache and logs
 .npm/
-.pnpm-store/
 *.log
 npm-debug.log*
-pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Test output
 coverage/

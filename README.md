@@ -6,19 +6,19 @@ default browser.
 ## Requirements
 
 - Node.js 20 or newer
-- pnpm
+- npm
 
 ## Install dependencies
 
 ```sh
-pnpm install
+npm install
 ```
 
 ## Use
 
 ```sh
-pnpm build
-pnpm start -- ./README.md
+npm run build
+npm start -- ./README.md
 ```
 
 After building, the CLI can also be run directly:
@@ -34,11 +34,11 @@ document.
 ## Development
 
 ```sh
-pnpm check
+npm run check
 ```
 
-`pnpm build` compiles the strict TypeScript sources in `src/` to `dist/`.
-`pnpm check` verifies formatting and types, builds the project, and runs the
+`npm run build` compiles the strict TypeScript sources in `src/` to `dist/`.
+`npm run check` verifies formatting and types, builds the project, and runs the
 Node.js test suite.
 
 Markdown is converted to HTML and sanitized before it is opened. Generated

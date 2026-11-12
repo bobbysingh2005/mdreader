@@ -2,6 +2,7 @@
   "name": "mdreader",
   "version": "1.0.0",
   "description": "A lightweight, accessible Markdown reader CLI that opens documents in your default browser.",
+  "packageManager": "npm@11.19.0",
   "bin": {
     "mdreader": "./dist/index.js"
   },
@@ -32,11 +33,11 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "start": "node ./dist/index.js",
-    "test": "pnpm build && node --test",
-    "check": "pnpm format:check && pnpm typecheck && pnpm test",
+    "test": "npm run build && node --test",
+    "check": "npm run format:check && npm run typecheck && npm test",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.js\" package.json tsconfig.json README.md",
     "format:check": "prettier --check \"src/**/*.ts\" \"test/**/*.js\" package.json tsconfig.json README.md",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
