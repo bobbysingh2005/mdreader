@@ -21,9 +21,18 @@ coverage/
 !.env.example
 
 # Build and package output
+bin/
 dist/
 *.tgz
 *.tsbuildinfo
+
+# Local-only agent notes and project prompt
+/AGENTS.md
+/agent.md
+/mdreader-implementation-prompt.md
+
+# Editor-generated workspace files
+*.code-workspace
 
 # Operating-system files
 .DS_Store
