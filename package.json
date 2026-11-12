@@ -1,0 +1,47 @@
+{
+  "name": "mdreader",
+  "version": "1.0.0",
+  "description": "A lightweight, accessible Markdown reader CLI that opens documents in your default browser.",
+  "bin": {
+    "mdreader": "./dist/index.js"
+  },
+  "author": "bobby singh <bobbysingh2005@gmail.com>",
+  "keywords": [
+    "markdown",
+    "reader",
+    "cli",
+    "accessibility",
+    "screen-reader"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist/**",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "marked": "^18.2.0",
+    "open": "^11.0.4",
+    "sanitize-html": "^2.18.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start": "node ./dist/index.js",
+    "test": "pnpm build && node --test",
+    "check": "pnpm format:check && pnpm typecheck && pnpm test",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.js\" package.json tsconfig.json README.md",
+    "format:check": "prettier --check \"src/**/*.ts\" \"test/**/*.js\" package.json tsconfig.json README.md",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/sanitize-html": "^2.16.2",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2"
+  }
+}
